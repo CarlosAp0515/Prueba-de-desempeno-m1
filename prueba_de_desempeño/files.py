@@ -1,3 +1,4 @@
+#CSV function to save the data
 def save_csv(students, road):
     if not students:
         print("Students is empty")
@@ -13,6 +14,7 @@ def save_csv(students, road):
     except Exception as e:
         print("Error:", e)
         return False
+#CSV function to load the data        
 def load_csv(road):
     students = []
     try:
