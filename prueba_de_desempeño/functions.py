@@ -1,3 +1,4 @@
+#Function to add a new student with the parameters students, name, id, age , course, state
 def add_new_student(students,name,id,age,course,state):
     while id <= 0:
         try:
@@ -26,21 +27,21 @@ def add_new_student(students,name,id,age,course,state):
     }
     students.append(student)
     return True
-    
+#function to show students
 def show_students(students):
     if not students:
         print("Students is empty.")
         return
     for student in students:
         print(f"Name: {student['name']} | id: {student['id']} | age: {student['age']} | course: {student['course']} | state: {student['state']}")
-
+#function to search students
 def search_student(students, id):
     for student in students:
         if student['id'] == id:
             return student
     return None
 
-    
+#function to update information 
 def update_inf_student(students,id,new_age=None,new_course=None,new_state=None):
     student = search_student(students,id)
     if student is None:
@@ -64,7 +65,7 @@ def update_inf_student(students,id,new_age=None,new_course=None,new_state=None):
         student["state"] = new_state
 
     return True
-
+#function to delete students
 def delete_student(students, id):
     student = search_student(students,id)
     if student is None:
