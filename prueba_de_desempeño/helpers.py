@@ -1,4 +1,6 @@
+#variable for the while
 sw = True
+#validators to data empty
 def enter_id():
     while sw is not False:
         try:
